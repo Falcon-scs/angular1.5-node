@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="myform">
+        <h2 class="myform-header">Sum</h2>
+
+        <div class="form-group">
+            <input type="text" ng-class="form-control" ng-model="$ctrl.val_a" placeholder="first value">
+        </div>
+        <div class="form-group">
+            <input type="text" ng-class="form-control" ng-model="$ctrl.val_b" placeholder="second value">
+        </div>
+
+        
+        <hr>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" ng-click="$ctrl.onSum()">SUM</button>
+        </div>
+
+        <div class="form-group">
+            <input type="text" ng-class="form-control" ng-model="$ctrl.sum" placeholder="Sum">
+        </div>
+
+
+        <div ng-if="$ctrl.customPdfFiles.length > 0" class="row">
+            <div class="cutomPdfFiles">
+                <h2>Custom Pdf Files</h2>
+                <div ng-repeat="record in $ctrl.customPdfFiles">
+                    <input type="text" ng-value="record.value" class="record"> <span><i class="fa fa-times"
+                            aria-hidden="true" ng-click="$ctrl.onRemove(record)"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
